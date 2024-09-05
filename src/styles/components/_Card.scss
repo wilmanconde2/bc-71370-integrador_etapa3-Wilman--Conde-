@@ -1,0 +1,66 @@
+h2 {
+  font-size: 1.3em;
+  text-align: center;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+p {
+  font-size: 0.9em;
+}
+
+.card {
+  width: 220px;
+  max-width: 300px;
+  height: 400px;
+  // background-color: orange;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
+
+  &__image-container {
+    height: 200px;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+/* -------------------------------------------------------- */
+/* PERSONALIZADO */
+/* -------------------------------------------------------- */
+
+.cart__button {
+  height: 6rem;
+
+  & input {
+    position: relative;
+    top: 1rem;
+    padding: 10px;
+    background-color: $color-secondary;
+    color: white;
+    border: 1px solid $color-primary;
+    border-radius: 25%;
+    font-size: 1rem;
+    font-family: $font-primary;
+
+    &:hover {
+      background-color: $color-primary;
+      color: white;
+    }
+  }
+}
+
+.card__image-container:hover {
+  transition: 0.1s transform ease-in;
+  transform: scale(0.99);
+  border-radius: 20%;
+  border: 1px solid $color-secondary;
+}

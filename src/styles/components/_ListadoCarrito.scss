@@ -1,0 +1,67 @@
+.tabla-carrito {
+  border-collapse: collapse;
+  width: 95%;
+  margin: 1rem auto;
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  .carrito-vacio {
+    text-align: center;
+    font-weight: bold;
+    margin: 2rem auto;
+  }
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+
+  &__btn {
+    background-color: $color-primary;
+    color: white;
+    font-size: small;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background-color: $color-secondary;
+    }
+  }
+
+  .empty {
+    background-color: $color-third;
+    color: white;
+    cursor: pointer;
+    &:hover {
+      background-color: orangered;
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+// TODO total carrito
+// ----------------------------------------------------------------
+
+.total {
+  text-align: center;
+}
+
+// ! ----------------breakpoint-----------------
+// ! -------------------------------------------
+
+@media (min-width: 576px) {
+  .contenedor__btn {
+    font-size: medium;
+  }
+}

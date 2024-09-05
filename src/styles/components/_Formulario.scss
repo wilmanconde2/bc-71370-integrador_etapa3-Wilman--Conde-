@@ -1,0 +1,84 @@
+.h1-alta {
+  margin-left: 6vw;
+  font-weight: 100;
+  color: $color-secondary;
+}
+
+.h3-formulario {
+  text-align: center;
+  color: $color-secondary;
+}
+
+.contenedor-form {
+  display: grid;
+  justify-items: center;
+
+  &__alta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 1rem;
+    justify-items: center;
+    background-color: rgba(66, 103, 178, 0.02);
+    border-radius: 15px;
+    border: 1px solid grey;
+    width: 60%;
+    text-align: center;
+
+    input {
+      justify-content: space-between;
+      width: 90%;
+      text-align: center;
+      border: none;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+    }
+    input::placeholder {
+      font-style: italic;
+      font-size: 0.8em;
+    }
+
+    label {
+      margin-bottom: 10px;
+      color: $color-secondary;
+    }
+
+    .btn-form-alta {
+      margin: 1rem;
+      padding: 3px;
+      padding-inline: 5px;
+      border-radius: 10px;
+      border: none;
+      color: $color-secondary;
+      cursor: pointer;
+      font-size: small;
+    }
+    .guardar {
+      background: $color-primary;
+      color: white;
+      width: 75px;
+      &:hover {
+        background: $color-secondary;
+      }
+    }
+    .limpiar {
+      background: $color-third;
+      color: white;
+      &:hover {
+        background: orangered;
+      }
+    }
+  }
+
+  // ! ----------------breakpoint-----------------
+  // ! -------------------------------------------
+
+  @media (min-width: 576px) {
+    .btn-form-alta {
+      padding: 5px;
+      padding-inline: 10px;
+      font-size: medium;
+    }
+    .guardar {
+      width: 90px;
+    }
+  }
+}

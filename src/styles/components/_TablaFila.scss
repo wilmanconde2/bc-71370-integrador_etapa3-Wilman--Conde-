@@ -1,0 +1,44 @@
+.img-row {
+  width: 50px;
+}
+
+.btn-items {
+  margin: 5px;
+  font-family: $font-primary;
+  padding: 3px;
+  padding-inline: 5px;
+  font-size: small;
+  border-radius: 10px;
+  border: none;
+  color: $color-secondary;
+  cursor: pointer;
+}
+
+.editar {
+  background: $color-fourth;
+  &:hover {
+    background: rgb(236, 209, 59);
+  }
+}
+.borrar {
+  color: white;
+  background: $color-third;
+  &:hover {
+    background: orangered;
+  }
+}
+
+// ! ----------------breakpoint-----------------
+// ! -------------------------------------------
+
+@media (min-width: 576px) {
+  .img-row {
+    width: 100px;
+  }
+
+  .btn-items {
+    padding: 5px;
+    padding-inline: 10px;
+    font-size: medium;
+  }
+}

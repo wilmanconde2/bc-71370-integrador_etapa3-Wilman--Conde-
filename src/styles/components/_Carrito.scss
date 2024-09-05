@@ -1,0 +1,18 @@
+.h1-carrito {
+  margin-left: 6vw;
+  font-weight: 100;
+  color: $color-secondary;
+}
+
+.img-carrito {
+  width: 50px;
+}
+
+// ! ----------------breakpoint-----------------
+// ! -------------------------------------------
+
+@media (min-width: 576px) {
+  .img-carrito {
+    width: 100px;
+  }
+}

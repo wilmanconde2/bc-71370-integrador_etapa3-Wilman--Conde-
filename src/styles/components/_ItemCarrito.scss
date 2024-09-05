@@ -1,0 +1,22 @@
+.btn-eliminar-carrito {
+  background-color: $color-third;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: small;
+  margin: 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: orangered;
+  }
+}
+
+// ! ----------------breakpoint-----------------
+// ! -------------------------------------------
+
+@media (min-width: 576px) {
+  .btn-eliminar-carrito {
+    font-size: medium;
+  }
+}

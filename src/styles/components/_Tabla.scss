@@ -1,0 +1,33 @@
+.tabla-alta {
+  border-collapse: separate;
+  width: 80%;
+  margin: 1rem auto;
+  justify-content: center;
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+  .min-width {
+    display: none;
+  }
+}
+
+// ! ----------------breakpoint-----------------
+// ! -------------------------------------------
+
+@media (min-width: 768px) {
+  .tabla-alta {
+    width: 80%;
+
+    .min-width {
+      display: table-cell;
+    }
+  }
+}
