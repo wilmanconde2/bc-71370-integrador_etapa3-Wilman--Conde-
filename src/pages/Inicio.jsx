@@ -31,3 +31,6 @@ const Inicio = () => {
 };
 
 export default Inicio;
+
+
+// TODO favicon paginas
