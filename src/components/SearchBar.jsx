@@ -1,6 +1,13 @@
-import { Link } from "react-router-dom";
+import { useContext, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import CarritoContext from '../context/CarritoContext';
 
 const SearchBar = () => {
+  const { carrito } = useContext(CarritoContext);
+
+  const badgeCarrito = [];
+  badgeCarrito.push(carrito.reduce((acc, producto) => acc + producto.cantidad, 0));
+
   return (
     <div className='search-bar'>
       <div className='search-bar__logo-container'>
@@ -10,12 +17,17 @@ const SearchBar = () => {
         <label htmlFor='busqueda' className='search-bar__form-label'>
           Toyland
         </label>
-        <input type='search' className='search-bar__form-search' id='busqueda' placeholder='¿Qué estás buscando?' />
-        <input type='submit' className='search-bar__form-submit' value='Buscar' />
+        <input
+          type='text'
+          className='search-bar__form-search'
+          placeholder='¿Qué estás buscando?'
+        />
+        <input type='submit' value='Buscar' className='search-bar__form-submit' />
       </form>
       <div className='search-bar__carrito-container'>
-        <Link to="carrito">
-        <img src='./img/cart.svg' alt='carrito' />
+        <Link to='carrito'>
+          <img src='./img/cart.svg' alt='carrito' />
+          {!carrito.length <= 0 && <span className='carrito-count'>{badgeCarrito}</span>}
         </Link>
       </div>
       <div className='menu-toogle'>

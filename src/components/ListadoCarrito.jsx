@@ -6,7 +6,7 @@ const ListadoCarrito = () => {
   const { carrito, limpiarCarritoContext, guardarCarritoContext } = useContext(CarritoContext);
 
   const handleComprar = () => {
-    alert('Gracias por su comprar');
+    alert('Gracias por su compra');
     guardarCarritoContext();
     limpiarCarritoContext();
   };
@@ -14,6 +14,9 @@ const ListadoCarrito = () => {
   const handleVaciar = () => {
     limpiarCarritoContext();
   };
+
+  const totalEnCarrito = [];
+  totalEnCarrito.push(carrito.reduce((acc, producto) => acc + producto.precio * producto.cantidad, 0));
 
   return (
     <>
@@ -23,7 +26,6 @@ const ListadoCarrito = () => {
             <th>Foto</th>
             <th>Nombre</th>
             <th>Cantidad</th>
-            {/* // TODO cambiar cantidad productos   */}
             <th>Precio</th>
             <th>Subtotal</th>
             <th>Acciones</th>
@@ -41,18 +43,22 @@ const ListadoCarrito = () => {
           )}
         </tbody>
       </table>
-      <hr />
       {!carrito.length <= 0 && (
         <>
-        <div colSpan='6' className='total'>{`Total ${123}`}</div>
-        <div className='contenedor'>
-          <button className='contenedor__btn empty' onClick={handleVaciar}>
-            Vaciar Carrito
-          </button>
-          <button className='contenedor__btn' onClick={handleComprar}>
-            Comprar
-          </button>
-        </div>
+          <div colSpan='6' className='totalEnCarrito'>
+            <p>
+              <b>Total: </b>
+              {`$${totalEnCarrito}`}
+            </p>
+          </div>
+          <div className='contenedor'>
+            <button className='contenedor__btn empty' onClick={handleVaciar}>
+              Vaciar Carrito
+            </button>
+            <button className='contenedor__btn' onClick={handleComprar}>
+              Comprar
+            </button>
+          </div>
         </>
       )}
     </>
@@ -60,4 +66,3 @@ const ListadoCarrito = () => {
 };
 
 export default ListadoCarrito;
-

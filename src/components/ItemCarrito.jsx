@@ -1,10 +1,12 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import CarritoContext from '../context/CarritoContext';
 
 const ItemCarrito = ({ producto }) => {
-  const { eliminarProductoDelCarritoContext } = useContext(CarritoContext);
+  const { eliminarProductoDelCarritoContext, carrito } = useContext(CarritoContext);
 
   const handleEliminar = (id) => eliminarProductoDelCarritoContext(id);
+
+  const subtotal = producto.cantidad * producto.precio;
 
   return (
     <tr>
@@ -13,8 +15,8 @@ const ItemCarrito = ({ producto }) => {
       </td>
       <td>{producto.nombre}</td>
       <td>{producto.cantidad}</td>
-      <td>{producto.precio}</td>
-      <td> {/*  TODO subtotal  */} </td>
+      <td>${producto.precio}</td>
+      <td>${subtotal}</td>
       <td>
         <button className='btn-eliminar-carrito' onClick={() => handleEliminar(producto.id)}>
           Eliminar

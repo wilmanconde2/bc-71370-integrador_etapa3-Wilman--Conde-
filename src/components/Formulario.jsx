@@ -54,7 +54,7 @@ const Formulario = () => {
 
   return (
     <>
-      <h3 className='h3-formulario'>{productoAEditar ? 'Editar producto' : 'Agregar nuevo producto'}</h3>
+      <h3 className='h3-formulario'>{productoAEditar ? 'Editar Producto' : 'Agregar Producto'}</h3>
       <div className='contenedor-form'>
         <form className='contenedor-form__alta' onSubmit={handleSubmit}>
           <div>

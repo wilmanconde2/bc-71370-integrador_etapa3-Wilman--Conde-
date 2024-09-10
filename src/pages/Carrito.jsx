@@ -9,10 +9,9 @@ const Carrito = () => {
       <h1 className='h1-carrito'>Productos en tu carrito de compras</h1>
       <hr />
       <ListadoCarrito />
+      <hr />
     </>
   );
 };
 
 export default Carrito;
-
-// TODO agregar numero de items en el carrito

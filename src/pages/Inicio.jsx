@@ -18,7 +18,6 @@ const Inicio = () => {
             </div>
             <h1>Toyland... Just for fun!!</h1>
             <h2>Envío gratis por ordenes mayores a $39!</h2>
-            <p>XXX productos encontrados</p>
           </header>
 
           <div className='cards-container' id='contenedorCards'>
@@ -31,6 +30,3 @@ const Inicio = () => {
 };
 
 export default Inicio;
-
-
-// TODO favicon paginas

@@ -17,9 +17,9 @@ const ProductosProvider = ({ children }) => {
   const getAllProductos = async () => {
     try {
       // ! petición al localhost db.json
-      const prods = await helperPeticionesHttp(url, {});
+      // const prods = await helperPeticionesHttp(url, {});
       // ! petición a mockAPI
-      // const prods = await helperPeticionesHttp(urlAPI, {});
+      const prods = await helperPeticionesHttp(urlAPI, {});
 
       setProductos(prods);
     } catch (error) {

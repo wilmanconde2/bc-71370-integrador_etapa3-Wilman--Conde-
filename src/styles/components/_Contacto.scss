@@ -4,10 +4,13 @@
     text-align: center;
     color: $color-secondary;
     padding-bottom: 1.5rem;
-
+    
     .contact1__title {
       padding-top: 1rem;
       padding-bottom: 1rem;
+      h1{
+        font-size: 3em;
+      }
     }
 
     img {
