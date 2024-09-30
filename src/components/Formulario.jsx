@@ -20,7 +20,21 @@ const Formulario = () => {
     useContext(ProductosContext);
 
   useEffect(() => {
-    productoAEditar ? setForm(productoAEditar) : setForm(formInit);
+    if (productoAEditar) {
+      setForm({
+        id: productoAEditar.id ?? null,
+        nombre: productoAEditar.nombre ?? '',
+        precio: productoAEditar.precio ?? '',
+        stock: productoAEditar.stock ?? '',
+        marca: productoAEditar.marca ?? '',
+        categoria: productoAEditar.categoria ?? '',
+        detalles: productoAEditar.detalles ?? '',
+        foto: productoAEditar.foto ?? '',
+        envio: productoAEditar.envio ?? false,
+      });
+    } else {
+      setForm(formInit);
+    }
   }, [productoAEditar]);
 
   const handleSubmit = async (e) => {
